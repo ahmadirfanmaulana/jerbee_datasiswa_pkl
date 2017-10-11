@@ -15,5 +15,6 @@
   <link href="<?php echo ASSET; ?>plugins/morrisjs/morris.css" rel="stylesheet" />
   <link href="<?php echo ASSET; ?>css/style.css" rel="stylesheet">
   <link href="<?php echo ASSET; ?>css/themes/all-themes.css" rel="stylesheet" />
+  <link href="<?php echo ASSET; ?>css/main.css" rel="stylesheet" />
 </head>
 <body class="theme-red">

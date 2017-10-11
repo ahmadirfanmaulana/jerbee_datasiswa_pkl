@@ -119,7 +119,7 @@
                     </ul>
                 </li>
                 <!-- #END# Notifications -->
-                <!-- Tasks --> 
+                <!-- Tasks -->
         </div>
     </div>
 </nav>
@@ -130,7 +130,7 @@
         <!-- User Info -->
         <div class="user-info">
             <div class="image">
-                <img src="images/user.png" width="48" height="48" alt="User" />
+                <img src="<?php echo ASSET; ?>images/user.png" width="48" height="48" alt="User" />
             </div>
             <div class="info-container">
                 <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
@@ -138,9 +138,9 @@
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                        <li><a href="<?php echo URL; ?>profile"><i class="material-icons">person</i>Profile</a></li>
                         <li role="seperator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                        <li><a href="<?php echo URL; ?>sign-out"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -149,44 +149,44 @@
         <!-- Menu -->
         <div class="menu">
             <ul class="list">
-                <li class="active">
+                <li class="<?php echo isset($menu_dashboard)?$menu_dashboard:NULL; ?>">
                     <a href="<?php echo URL; ?>">
                         <i class="material-icons">dashboard</i>
                         <span>DASHBOARD</span>
                     </a>
                 </li>
-                <li>
+                <li class="<?php echo isset($menu_sm)?$menu_sm:NULL; ?>">
                     <a href="javascript:void(0)" class="menu-toggle">
                         <i class="material-icons">supervisor_account</i>
                         <span>DATA SISWA / MAHASISWA</span>
                     </a>
                     <ul class="ml-menu">
-                      <li><a href="#">SISWA</a></li>
-                      <li><a href="#">MAHASISWA</a></li>
+                      <li class="<?php echo isset($menu_siswa)?$menu_siswa:NULL; ?>"><a href="<?php echo URL; ?>siswa">SISWA</a></li>
+                      <li class="<?php echo isset($menu_mahasiswa)?$menu_mahasiswa:NULL; ?>"><a href="<?php echo URL; ?>mahasiswa">MAHASISWA</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="<?php echo isset($menu_su)?$menu_su:NULL; ?>">
                     <a href="javascript:void(0)" class="menu-toggle">
                         <i class="material-icons">business</i>
                         <span>SEKOLAH / UNIVERSITAS</span>
                     </a>
                     <ul class="ml-menu">
-                      <li><a href="#">SEKOLAH</a></li>
-                      <li><a href="#">UNIVERSITAS</a></li>
+                      <li class="<?php echo isset($menu_sekolah)?$menu_sekolah:NULL; ?>"><a href="<?php echo URL; ?>sekolah">SEKOLAH</a></li>
+                      <li class="<?php echo isset($menu_universitas)?$menu_universitas:NULL; ?>"><a href="<?php echo URL; ?>universitas">UNIVERSITAS</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="<?php echo isset($menu_pk)?$menu_pk:NULL; ?>">
                     <a href="javascript:void(0)" class="menu-toggle">
                         <i class="material-icons">devices</i>
                         <span>PROGRAM KEAHLIAN</span>
                     </a>
                     <ul class="ml-menu">
-                      <li><a href="#">JURUSAN</a></li>
-                      <li><a href="#">FAKULTAS</a></li>
+                      <li class="<?php echo isset($menu_jurusan)?$menu_jurusan:NULL; ?>"><a href="<?php echo URL; ?>jurusan">JURUSAN</a></li>
+                      <li class="<?php echo isset($menu_fakultas)?$menu_fakultas:NULL; ?>"><a href="<?php echo URL; ?>fakultas">FAKULTAS</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="<?php echo URL; ?>">
+                <li class="<?php echo isset($menu_bc)?$menu_bc:NULL; ?>">
+                    <a href="<?php echo URL; ?>bakal-calon">
                         <i class="material-icons">message</i>
                         <span>BAKAL CALON PKL</span>
                     </a>
